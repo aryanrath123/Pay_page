@@ -1,0 +1,207 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: #444;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9; /* Background color for contrast */
+}
+
+/* Container */
+.container {
+  display: flex;
+  width: 70%; /* Adjusted width for better spacing */
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  background-color: #fff; /* Ensure background contrast for readability */
+  padding: 20px; /* Padding inside the container */
+}
+
+/* Left Section */
+.left {
+  width: 25%;
+  font-weight: bold;
+}
+.left p {
+  padding: 30px 20px;
+}
+.methods {
+  padding: 10px 0;
+}
+.methods div {
+  padding: 10px 20px; /* Increased padding for better spacing */
+  cursor: pointer;
+  font-size: 15px;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+.methods div:hover {
+  color: #008080; /* Teal color */
+  box-shadow: 0 0 10px rgba(0, 128, 128, 0.2); /* Teal shadow */
+}
+
+/* Icons */
+.fa-solid {
+  margin-right: 10px;
+  font-size: 22px;
+}
+
+/* Center Section */
+.center {
+  width: 50%;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  height: 70vh;
+  padding: 20px; /* Padding for spacing */
+}
+.center a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Margin between image and other content */
+}
+
+/* Right Section */
+.right {
+  width: 25%;
+}
+.right p {
+  padding: 30px 20px;
+  font-weight: bold;
+}
+.details {
+  padding: 20px 20px;
+}
+.right a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+/* Card Details */
+.card-details {
+  padding: 20px 30px; /* Adjusted padding for better spacing */
+}
+.card-details .c-number {
+  width: 100%;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  padding: 0 12px;
+  margin-top: 15px; /* Margin for spacing */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.card-details .c-number:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  border-color: #888;
+}
+input {
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  flex-grow: 1;
+}
+
+/* Expiry Date & CVV */
+.c-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Gap between expiry date and CVV */
+  margin: 20px 0;
+}
+.cc-exp,
+.cvv-box {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  height: 50px; /* Same height for alignment */
+  padding: 12px;
+}
+.cc-exp {
+  width: 150px; /* Width for Expiry Date */
+}
+.cvv-container {
+  flex: 1; /* Flex to take remaining space */
+}
+.cvv-box {
+  width: 108px; /* Width for CVV */
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 0; /* No top margin to align properly */
+}
+.cvv-input {
+  border: none;
+  outline: none;
+  width: calc(100% - 24px); /* Adjust width to fit with padding */
+  height: 100%;
+}
+.cvv-box i {
+  position: absolute;
+  right: 12px;
+  color: #aaa;
+}
+
+/* Email Input */
+.email {
+  margin-top: 20px; /* Margin to separate from previous fields */
+}
+.email input {
+  width: 100%;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  padding: 12px;
+  height: 50px;
+}
+
+/* Button */
+button {
+  width: 100%;
+  border: none;
+  height: 50px;
+  border-radius: 3px;
+  margin-top: 30px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #008080; /* Teal color */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+button:hover {
+  background-color: #004d4d; /* Darker teal for hover */
+  color: white;
+  cursor: pointer;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+::-webkit-scrollbar-thumb {
+  background-color: #008080; /* Teal color for scrollbar thumb */
+  border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+  background-color: #f9f9f9; /* Background color of the track */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+  }
+  .left,
+  .center,
+  .right {
+    width: 100%;
+  }
+}
